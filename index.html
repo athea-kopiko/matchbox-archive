@@ -1,132 +1,15 @@
-<!doctype html>
-<html lang="cs">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Matchbox Superfast Archive</title>
-  <style>
-    :root{
-      --paper:#f4efe6;
-      --paper2:#efe8dc;
-      --ink:#1f1f1f;
-      --muted:#6f6a62;   /* barva jako tvoje "info" */
-      --line:#cfc6b8;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: ui-serif, Georgia, "Times New Roman", serif;
-      color:var(--ink);
-      background:var(--paper);
-    }
-    .wrap{
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 48px 20px 56px;
-    }
-    header{
-      text-align:center;
-      margin-bottom: 44px;
-    }
-    h1{
-      margin:0 0 12px;
-      letter-spacing:.5px;
-      font-size: 44px;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    .sub{
-      margin:0;
-      color:var(--muted);
-      letter-spacing: .8px;
-      text-transform: uppercase;
-      font-size: 14px;
-    }
-    .rule{
-      width: 160px;
-      height: 1px;
-      background: var(--line);
-      margin: 18px auto 0;
-    }
+<div class="nav-wrap">
+  <a class="info-pill" href="info.html">INFO</a>
 
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 18px;
-      margin-top: 36px;
-    }
-    @media (min-width: 720px){
-      .grid{grid-template-columns: 1fr 1fr;}
-    }
+  <div class="year-grid">
+    <a class="year-card" href="2005-usa.html">
+      <div class="year-title">2005 <span class="muted">USA</span></div>
+      <div class="year-sub">enter</div>
+    </a>
 
-    a.card{
-      display:block;
-      text-decoration:none;
-      color:inherit;
-      background: var(--paper2);
-      padding: 34px 30px;
-      border: 1px solid var(--line);
-      transition: transform .14s ease, background .14s ease, box-shadow .14s ease;
-    }
-    a.card:hover{
-      background: #e7dfd2;
-      transform: translateY(-1px);
-      box-shadow: 0 10px 24px rgba(0,0,0,.06);
-    }
-    .year{
-      font-size: 34px;
-      font-weight: 700;
-      letter-spacing: .5px;
-      text-transform: uppercase;
-      margin: 0 0 8px;
-    }
-    .enter{
-      font-size: 13px;
-      letter-spacing: .9px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin:0;
-    }
-
-    .footer{
-      text-align:center;
-      margin-top: 44px;
-      color: var(--muted);
-      font-size: 13px;
-      letter-spacing:.6px;
-      text-transform: uppercase;
-    }
-    .footer a{
-      color: inherit;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(111,106,98,.35);
-    }
-    .footer a:hover{border-bottom-color: rgba(111,106,98,.8);}
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <header>
-      <h1>Matchbox Superfast Archive</h1>
-      <p class="sub">Illustrated &amp; documented by kopiko</p>
-      <div class="rule"></div>
-    </header>
-
-    <main class="grid">
-      <a class="card" href="./2005-usa/">
-        <div class="year">2005 USA</div>
-        <p class="enter">enter</p>
-      </a>
-
-      <a class="card" href="./2005-row/">
-        <div class="year">2005 ROW</div>
-        <p class="enter">enter</p>
-      </a>
-    </main>
-
-    <div class="footer">
-      <a href="./info/">info</a> · <a href="https://www.zonerama.com/" target="_blank" rel="noopener">zonerama</a> · <a href="https://www.pinterest.com/" target="_blank" rel="noopener">pinterest</a>
-    </div>
+    <a class="year-card" href="2005-row.html">
+      <div class="year-title">2005 <span class="muted">ROW</span></div>
+      <div class="year-sub">enter</div>
+    </a>
   </div>
-</body>
-</html>
+</div>
