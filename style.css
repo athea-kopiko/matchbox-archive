@@ -14,7 +14,7 @@ body{
 
 .nav-wrap{
   width: min(860px, 92vw);
-  margin: 28px auto 0;
+  margin: 10px auto 0;
   position: relative;
   padding-top: 18px; /* prostor pro INFO pilulku */
 }
@@ -70,11 +70,12 @@ body{
 }
 
 .year-sub{
-  margin-top: 10px;
-  font-size: 22px;
-  color: var(--muted);
-  font-style: italic;
+  font-style: normal;
+  letter-spacing: .08em;
+  font-size: 14px;
+  opacity: .6;
 }
+
 
 /* mobil: pod sebe */
 @media (max-width: 650px){
