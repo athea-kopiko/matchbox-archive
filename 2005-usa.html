@@ -1,10 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
 <head>
-  <title>Matchbox Archive</title>
+<meta charset="UTF-8">
+<title>Matchbox Superfast Archive – 2005 USA</title>
+
+<style>
+:root{
+  --bg: #f4efe5;
+  --line: rgba(0,0,0,.18);
+  --text: rgba(0,0,0,.85);
+}
+
+body{
+  margin:0;
+  background: var(--bg);
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--text);
+}
+
+.wrapper{
+  width: min(1100px, 94vw);
+  margin: 60px auto;
+}
+
+h1{
+  text-align:center;
+  font-weight: normal;
+  letter-spacing: .04em;
+  margin-bottom: 50px;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
+  gap: 40px;
+}
+
+.card{
+  text-align:center;
+}
+
+.card img{
+  width:100%;
+  border-radius:12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.08);
+  transition: .25s ease;
+}
+
+.card img:hover{
+  transform: scale(1.03);
+}
+
+.caption{
+  margin-top:14px;
+  font-size:18px;
+}
+</style>
 </head>
+
 <body>
-  <h1>Matchbox Archive</h1>
-  <p>Work in progress.</p>
+
+<div class="wrapper">
+  <h1>2005 USA</h1>
+
+  <div class="gallery">
+
+    <div class="card">
+      <a href="images/01-2005-usa-web.jpg" target="_blank">
+        <img src="images/01-2005-usa-web.jpg" alt="">
+      </a>
+      <div class="caption">1957 Ford Thunderbird</div>
+    </div>
+
+    <div class="card">
+      <a href="images/02-2005-usa-web.jpg" target="_blank">
+        <img src="images/02-2005-usa-web.jpg" alt="">
+      </a>
+      <div class="caption">Ford F-150 SVT Lightning</div>
+    </div>
+
+    <div class="card">
+      <a href="images/03-2005-usa-web.jpg" target="_blank">
+        <img src="images/03-2005-usa-web.jpg" alt="">
+      </a>
+      <div class="caption">Jeep Wrangler</div>
+    </div>
+
+  </div>
+</div>
+
 </body>
 </html>
