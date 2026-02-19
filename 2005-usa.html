@@ -1,93 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
 <head>
-<meta charset="UTF-8">
-<title>Matchbox Superfast Archive – 2005 USA</title>
-
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2005 USA – Matchbox Superfast Archive</title>
 <style>
-:root{
-  --bg: #f4efe5;
-  --line: rgba(0,0,0,.18);
-  --text: rgba(0,0,0,.85);
-}
+  :root{
+    --bg:#f4efe5;
+    --line:rgba(0,0,0,.18);
+    --text:rgba(0,0,0,.85);
+    --muted:rgba(0,0,0,.55);
+    --panel:rgba(255,255,255,.18);
+  }
+  body{ margin:0; background:var(--bg); color:var(--text); font-family:Georgia,"Times New Roman",serif; }
+  .wrap{ width:min(1200px,92vw); margin:40px auto 70px; }
+  h1{ margin:0 0 8px; text-align:center; font-weight:normal; letter-spacing:.06em; text-transform:uppercase; }
+  .sub{ text-align:center; color:var(--muted); margin:0 0 26px; font-size:14px; letter-spacing:.08em; text-transform:uppercase; }
+  .topbar{ display:flex; justify-content:center; margin:18px 0 26px; }
+  .back{
+    text-decoration:none; color:var(--text);
+    border:1px solid var(--line); background:var(--panel);
+    padding:8px 14px; border-radius:999px;
+    font-variant:small-caps; letter-spacing:.06em;
+  }
 
-body{
-  margin:0;
-  background: var(--bg);
-  font-family: Georgia, "Times New Roman", serif;
-  color: var(--text);
-}
-
-.wrapper{
-  width: min(1100px, 94vw);
-  margin: 60px auto;
-}
-
-h1{
-  text-align:center;
-  font-weight: normal;
-  letter-spacing: .04em;
-  margin-bottom: 50px;
-}
-
-.gallery{
-  display:grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
-  gap: 40px;
-}
-
-.card{
-  text-align:center;
-}
-
-.card img{
-  width:100%;
-  border-radius:12px;
-  box-shadow: 0 8px 30px rgba(0,0,0,.08);
-  transition: .25s ease;
-}
-
-.card img:hover{
-  transform: scale(1.03);
-}
-
-.caption{
-  margin-top:14px;
-  font-size:18px;
-}
+  /* menší náhledy, méně rolování */
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 18px;
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+    background:rgba(255,255,255,.10);
+  }
+  .card{
+    display:block;
+    text-decoration:none;
+    color:inherit;
+    padding:14px 14px 12px;
+    text-align:center;
+  }
+  .thumb{
+    width:100%;
+    border-radius:10px;
+    display:block;
+    background:#fff;
+  }
+  .cap{
+    margin-top:10px;
+    font-size:14px;
+    color:var(--muted);
+    letter-spacing:.03em;
+  }
 </style>
 </head>
-
 <body>
+  <div class="wrap">
+    <h1>2005 USA</h1>
+    <p class="sub">Superfast</p>
 
-<div class="wrapper">
-  <h1>2005 USA</h1>
-
-  <div class="gallery">
-
-    <div class="card">
-      <a href="images/01-2005-usa-web.jpg" target="_blank">
-        <img src="images/01-2005-usa-web.jpg" alt="">
-      </a>
-      <div class="caption">1957 Ford Thunderbird</div>
+    <div class="topbar">
+      <a class="back" href="./">home</a>
     </div>
 
-    <div class="card">
-      <a href="images/02-2005-usa-web.jpg" target="_blank">
-        <img src="images/02-2005-usa-web.jpg" alt="">
+    <div class="grid">
+      <!-- KARTA 01 -->
+      <a class="card" href="2005-usa/01.html">
+        <img class="thumb" src="images/01-2005-usa-web.jpg" alt="2005 USA #1">
+        <div class="cap">#1</div>
       </a>
-      <div class="caption">Ford F-150 SVT Lightning</div>
-    </div>
 
-    <div class="card">
-      <a href="images/03-2005-usa-web.jpg" target="_blank">
-        <img src="images/03-2005-usa-web.jpg" alt="">
+      <!-- KARTA 02 -->
+      <a class="card" href="2005-usa/02.html">
+        <img class="thumb" src="images/02-2005-usa-web.jpg" alt="2005 USA #2">
+        <div class="cap">#2</div>
       </a>
-      <div class="caption">Jeep Wrangler</div>
-    </div>
 
+      <!-- KARTA 03 -->
+      <a class="card" href="2005-usa/03.html">
+        <img class="thumb" src="images/03-2005-usa-web.jpg" alt="2005 USA #3">
+        <div class="cap">#3</div>
+      </a>
+
+      <!-- ...přidáš další -->
+    </div>
   </div>
-</div>
-
 </body>
 </html>
