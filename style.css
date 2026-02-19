@@ -24,12 +24,12 @@ body{
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--panel);
+  background: rgba(255,255,255,.20);
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 6px 18px;
   text-decoration: none;
-  color: var(--text);
+  color: var(--muted);
   letter-spacing: .06em;
   font-variant: small-caps;
 }
@@ -69,12 +69,7 @@ body{
   margin-left: 6px;
 }
 
-.year-sub{
-  font-style: normal;
-  letter-spacing: .08em;
-  font-size: 14px;
-  opacity: .6;
-}
+.year-sub{ display:none; } /* úplně pryč */
 
 
 /* mobil: pod sebe */
