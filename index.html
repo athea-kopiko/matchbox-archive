@@ -1,112 +1,137 @@
-<div class="nav-wrap">
-  <a class="info-pill" href="info.html">INFO</a>
-
-  <div class="year-grid">
-    <a class="year-card" href="2005-usa.html">
-      <div class="year-title">2005 <span class="muted">USA</span></div>
-      <div class="year-sub">enter</div>
-    </a>
-    
+<!doctype html>
+<html lang="cs">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Matchbox Superfast Archive</title>
 
   <style>
-  :root{
-  --bg: #f4efe5;      /* lehce béžová */
-  --panel: #efe7da;   /* trochu tmavší béžová pro rámeček */
-  --line: rgba(0,0,0,.18);
-  --text: rgba(0,0,0,.85);
-  --muted: rgba(0,0,0,.55);
-}
+    :root{
+      --bg: #f4efe5;      /* lehce béžová */
+      --panel: #efe7da;   /* trochu tmavší béžová pro rámeček */
+      --line: rgba(0,0,0,.18);
+      --text: rgba(0,0,0,.85);
+      --muted: rgba(0,0,0,.55);
+    }
 
-body{
-  background: var(--bg);
-  color: var(--text);
-  font-family: Georgia, "Times New Roman", serif;
-  <img src="homepage-hero.jpg" alt="Matchbox Superfast Archive" style="width:100%; max-width:1200px; display:block; margin:0 auto;">
+    *{ box-sizing: border-box; }
 
-}
+    body{
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+    }
 
-.nav-wrap{
-  width: min(860px, 92vw);
-  margin: 28px auto 0;
-  position: relative;
-  padding-top: 18px; /* prostor pro INFO pilulku */
-}
+    .wrap{
+      width: min(1200px, 92vw);
+      margin: 0 auto;
+      padding: 22px 0 50px;
+    }
 
-.info-pill{
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 6px 18px;
-  text-decoration: none;
-  color: var(--text);
-  letter-spacing: .06em;
-  font-variant: small-caps;
-}
+    .hero{
+      width: 100%;
+      max-width: 1200px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 12px;
+    }
 
-.year-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  overflow: hidden; /* aby se vnitřní dělící čára držela v rámečku */
-  background: rgba(255,255,255,.20);
-}
+    .nav-wrap{
+      width: min(860px, 92vw);
+      margin: 22px auto 0;
+      position: relative;
+      padding-top: 18px; /* prostor pro INFO pilulku */
+    }
 
-.year-card{
-  display: grid;
-  place-items: center;
-  padding: 20px 10px 18px;
-  text-decoration: none;
-  color: var(--text);
-  text-align: center;
-}
+    .info-pill{
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 18px;
+      text-decoration: none;
+      color: var(--text);
+      letter-spacing: .06em;
+      font-variant: small-caps;
+    }
 
-.year-card + .year-card{
-  border-left: 1px solid var(--line);
-}
+    .year-grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden; /* drží vnitřní čáru v rámečku */
+      background: rgba(255,255,255,.20);
+    }
 
-.year-title{
-  font-size: 34px;
-  letter-spacing: .02em;
-  line-height: 1.05;
-}
+    .year-card{
+      display: grid;
+      place-items: center;
+      padding: 22px 10px 20px;
+      text-decoration: none;
+      color: var(--text);
+      text-align: center;
+    }
 
-.year-title .muted{
-  font-size: .72em;
-  color: var(--muted);
-  letter-spacing: .08em;
-  margin-left: 6px;
-}
+    .year-card + .year-card{
+      border-left: 1px solid var(--line);
+    }
 
-.year-sub{
-  margin-top: 10px;
-  font-size: 22px;
-  color: var(--muted);
-  font-style: italic;
-}
+    .year-title{
+      font-size: 34px;
+      letter-spacing: .02em;
+      line-height: 1.05;
+    }
 
-/* mobil: pod sebe */
-@media (max-width: 650px){
-  .year-grid{ grid-template-columns: 1fr; }
-  .year-card + .year-card{ border-left: none; border-top: 1px solid var(--line); }
-}
+    .year-title .muted{
+      font-size: .72em;
+      color: var(--muted);
+      letter-spacing: .08em;
+      margin-left: 6px;
+    }
 
+    .year-sub{
+      margin-top: 10px;
+      font-size: 22px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    @media (max-width: 650px){
+      .year-grid{ grid-template-columns: 1fr; }
+      .year-card + .year-card{
+        border-left: none;
+        border-top: 1px solid var(--line);
+      }
+    }
   </style>
-
-  <link rel="stylesheet" href="style.css">
-
 </head>
 
-    <a class="year-card" href="2005-row.html">
-      <div class="year-title">2005 <span class="muted">ROW</span></div>
-      <div class="year-sub">enter</div>
-    </a>
+<body>
+  <div class="wrap">
+    <!-- Uprav cestu podle toho, kam jsi obrázek nahrál:
+         pokud je v assets/, dej: assets/homepage-hero.jpg -->
+    <img class="hero" src="assets/homepage-hero.jpg" alt="Matchbox Superfast Archive" />
+
+    <div class="nav-wrap">
+      <a class="info-pill" href="info.html">INFO</a>
+
+      <div class="year-grid">
+        <a class="year-card" href="2005-usa.html">
+          <div class="year-title">2005 <span class="muted">USA</span></div>
+          <div class="year-sub">enter</div>
+        </a>
+
+        <a class="year-card" href="2005-row.html">
+          <div class="year-title">2005 <span class="muted">ROW</span></div>
+          <div class="year-sub">enter</div>
+        </a>
+      </div>
+    </div>
   </div>
-</div>
+</body>
+</html>
