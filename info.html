@@ -1,10 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
 <head>
-  <title>Matchbox Archive</title>
+<meta charset="UTF-8">
+<title>Info | Matchbox Superfast Archive</title>
+
+<style>
+:root{
+  --bg:#f4efe5;
+  --text:rgba(0,0,0,.85);
+  --muted:rgba(0,0,0,.65);
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  font-family:Georgia,"Times New Roman",serif;
+  color:var(--text);
+}
+
+.wrap{
+  width:min(900px,92vw);
+  margin:60px auto;
+  text-align:center;
+}
+
+.wrap img{
+  width:100%;
+  max-width:900px;
+  display:block;
+  margin:0 auto 50px;
+}
+
+.info-text{
+  max-width:680px;
+  margin:0 auto;
+  line-height:1.7;
+  font-size:18px;
+}
+
+.info-text strong{
+  font-size:22px;
+  display:block;
+  margin-bottom:18px;
+}
+
+.back{
+  margin-top:60px;
+  display:inline-block;
+  text-decoration:none;
+  color:var(--muted);
+  border-bottom:1px solid rgba(0,0,0,.2);
+  padding-bottom:4px;
+}
+</style>
 </head>
+
 <body>
-  <h1>Matchbox Archive</h1>
-  <p>Work in progress.</p>
+
+<div class="wrap">
+
+  <img src="info-layout.jpg" alt="Archive Structure">
+
+  <div class="info-text">
+    <strong>Matchbox Superfast Archive</strong>
+
+    Personal non-commercial illustration archive focused on
+    Superfast series (2004–2008).
+
+    <br><br>
+
+    Each model includes:
+    original photographed model,
+    colour illustration,
+    and pencil drawing documentation.
+
+    <br><br>
+
+    All models photographed and redrawn manually.
+  </div>
+
+  <a class="back" href="index.html">← back to archive</a>
+
+</div>
+
 </body>
 </html>
