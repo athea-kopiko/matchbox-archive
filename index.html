@@ -7,8 +7,8 @@
 
   <style>
     :root{
-      --bg: #f4efe5;      /* lehce béžová */
-      --panel: #efe7da;   /* trochu tmavší béžová pro rámeček */
+      --bg: #f4efe5;
+      --panel: #efe7da;
       --line: rgba(0,0,0,.18);
       --text: rgba(0,0,0,.85);
       --muted: rgba(0,0,0,.55);
@@ -41,7 +41,7 @@
       width: min(860px, 92vw);
       margin: 22px auto 0;
       position: relative;
-      padding-top: 32px; /* prostor pro INFO pilulku */
+      padding-top: 32px;
     }
 
     .info-pill{
@@ -49,7 +49,7 @@
       top: 0;
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(255,255,255,.20);   /* stejné jako panel */
+      background: rgba(255,255,255,.20);
       border: 1px solid var(--line);
       border-radius: 999px;
       padding: 6px 18px;
@@ -64,7 +64,7 @@
       grid-template-columns: 1fr 1fr;
       border: 1px solid var(--line);
       border-radius: 14px;
-      overflow: hidden; /* drží vnitřní čáru v rámečku */
+      overflow: hidden;
       background: rgba(255,255,255,.20);
     }
 
@@ -94,7 +94,15 @@
       margin-left: 6px;
     }
 
-    .year-sub{ display:none; } /* úplně pryč */
+    .year-sub{ display:none; }
+
+    .foot{
+      margin:60px 0 0;
+      text-align:right;
+      font-size:13px;
+      letter-spacing:.08em;
+      color:var(--muted);
+    }
 
     @media (max-width: 650px){
       .year-grid{ grid-template-columns: 1fr; }
@@ -102,23 +110,12 @@
         border-left: none;
         border-top: 1px solid var(--line);
       }
-
-.foot{
-  margin:60px auto 30px;
-  width:min(1200px,92vw);
-  text-align:right;
-  font-size:13px;
-  letter-spacing:.08em;
-  color:var(--muted);
-}
     }
   </style>
 </head>
-  
+
 <body>
   <div class="wrap">
-    <!-- Uprav cestu podle toho, kam jsi obrázek nahrál:
-         pokud je v assets/, dej: assets/homepage.jpg -->
     <img class="hero" src="homepage.jpg" alt="Matchbox Superfast Archive" />
 
     <div class="nav-wrap">
@@ -127,20 +124,19 @@
       <div class="year-grid">
         <a class="year-card" href="2005-usa.html">
           <div class="year-title">2005 <span class="muted">USA</span></div>
-          <div class="year-sub">enter</div>
         </a>
 
         <a class="year-card" href="2005-row.html">
           <div class="year-title">2005 <span class="muted">ROW</span></div>
-          <div class="year-sub">enter</div>
         </a>
       </div>
     </div>
+
+    <footer class="foot">© Kopiko</footer>
   </div>
-  
-  <footer class="foot">
-  © Kopiko
-</footer>
-  
+
+  <script data-goatcounter="https://kopiko.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+
 </body>
 </html>
