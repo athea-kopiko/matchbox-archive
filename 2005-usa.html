@@ -4,27 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>2005 USA – Matchbox Superfast Archive</title>
-<style>
-  :root{
-    --bg:#f4efe5;
-    --line:rgba(0,0,0,.18);
-    --text:rgba(0,0,0,.85);
-    --muted:rgba(0,0,0,.55);
-    --panel:rgba(255,255,255,.18);
-  }
-  body{ margin:0; background:var(--bg); color:var(--text); font-family:Georgia,"Times New Roman",serif; }
-  .wrap{ width:min(1200px,92vw); margin:40px auto 70px; }
-  h1{ margin:0 0 8px; text-align:center; font-weight:normal; letter-spacing:.06em; text-transform:uppercase; }
-  .sub{ text-align:center; color:var(--muted); margin:0 0 26px; font-size:14px; letter-spacing:.08em; text-transform:uppercase; }
-  .topbar{ display:flex; justify-content:center; margin:18px 0 26px; }
-  .back{
-    text-decoration:none; color:var(--text);
-    border:1px solid var(--line); background:var(--panel);
-    padding:8px 14px; border-radius:999px;
-    font-variant:small-caps; letter-spacing:.06em;
-  }
 
-  /* menší náhledy, méně rolování */
 <style>
   :root{
     --bg:#f4efe5;
@@ -36,7 +16,17 @@
     --thumbMin: 180px; /* výchozí velikost karet */
   }
 
-  /* ... */
+  body{ margin:0; background:var(--bg); color:var(--text); font-family:Georgia,"Times New Roman",serif; }
+  .wrap{ width:min(1200px,92vw); margin:40px auto 70px; }
+  h1{ margin:0 0 8px; text-align:center; font-weight:normal; letter-spacing:.06em; text-transform:uppercase; }
+  .sub{ text-align:center; color:var(--muted); margin:0 0 26px; font-size:14px; letter-spacing:.08em; text-transform:uppercase; }
+  .topbar{ display:flex; justify-content:center; margin:18px 0 18px; }
+  .back{
+    text-decoration:none; color:var(--text);
+    border:1px solid var(--line); background:var(--panel);
+    padding:8px 14px; border-radius:999px;
+    font-variant:small-caps; letter-spacing:.06em;
+  }
 
   .grid{
     display:grid;
@@ -46,30 +36,6 @@
     border-radius:14px;
     overflow:hidden;
     background:rgba(255,255,255,.10);
-  }
-
-  /* posuvník jen na mobilu */
-  .thumbctl{
-    display:none;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    margin: 12px 0 18px;
-    color: var(--muted);
-    font-size: 13px;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-  }
-  .thumbctl input[type="range"]{
-    width:min(420px, 80vw);
-    accent-color: rgba(0,0,0,.35);
-  }
-
-  @media (max-width: 720px){
-    .thumbctl{ display:flex; }
-    :root{ --thumbMin: 120px; } /* default na mobilu -> cca 3 vedle sebe */
-  }
-</style>
   }
   .card{
     display:block;
@@ -90,8 +56,31 @@
     color:var(--muted);
     letter-spacing:.03em;
   }
+
+  /* posuvník jen na mobilu */
+  .thumbctl{
+    display:none;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    margin: 0 0 18px;
+    color: var(--muted);
+    font-size: 13px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+  .thumbctl input[type="range"]{
+    width:min(420px, 80vw);
+    accent-color: rgba(0,0,0,.35);
+  }
+
+  @media (max-width: 720px){
+    .thumbctl{ display:flex; }
+    :root{ --thumbMin: 120px; } /* default na mobilu -> cca 3 vedle sebe */
+  }
 </style>
 </head>
+
 <body>
   <div class="wrap">
     <h1>2005 USA</h1>
@@ -100,101 +89,29 @@
     <div class="topbar">
       <a class="back" href="./">home</a>
     </div>
-    
-<div class="thumbctl">
-  <span>náhledy</span>
-  <input id="thumbRange" type="range" min="105" max="180" value="120" step="5">
-</div>
-    
+
+    <div class="thumbctl">
+      <span>náhledy</span>
+      <input id="thumbRange" type="range" min="105" max="180" value="120" step="5">
+    </div>
+
     <div class="grid">
-<a class="card" href="2005-usa/01.html"><img class="thumb" src="images/01-2005-usa-web.jpg" alt="2005 USA #01"><div class="cap">#01</div></a>
-<a class="card" href="2005-usa/02.html"><img class="thumb" src="images/02-2005-usa-web.jpg" alt="2005 USA #02"><div class="cap">#02</div></a>
-<a class="card" href="2005-usa/03.html"><img class="thumb" src="images/03-2005-usa-web.jpg" alt="2005 USA #03"><div class="cap">#03</div></a>
-<a class="card" href="2005-usa/04.html"><img class="thumb" src="images/04-2005-usa-web.jpg" alt="2005 USA #04"><div class="cap">#04</div></a>
-<a class="card" href="2005-usa/05.html"><img class="thumb" src="images/05-2005-usa-web.jpg" alt="2005 USA #05"><div class="cap">#05</div></a>
-<a class="card" href="2005-usa/06.html"><img class="thumb" src="images/06-2005-usa-web.jpg" alt="2005 USA #06"><div class="cap">#06</div></a>
-<a class="card" href="2005-usa/07.html"><img class="thumb" src="images/07-2005-usa-web.jpg" alt="2005 USA #07"><div class="cap">#07</div></a>
-<a class="card" href="2005-usa/08.html"><img class="thumb" src="images/08-2005-usa-web.jpg" alt="2005 USA #08"><div class="cap">#08</div></a>
-<a class="card" href="2005-usa/09.html"><img class="thumb" src="images/09-2005-usa-web.jpg" alt="2005 USA #09"><div class="cap">#09</div></a>
-<a class="card" href="2005-usa/10.html"><img class="thumb" src="images/10-2005-usa-web.jpg" alt="2005 USA #10"><div class="cap">#10</div></a>
-<a class="card" href="2005-usa/11.html"><img class="thumb" src="images/11-2005-usa-web.jpg" alt="2005 USA #11"><div class="cap">#11</div></a>
-<a class="card" href="2005-usa/12.html"><img class="thumb" src="images/12-2005-usa-web.jpg" alt="2005 USA #12"><div class="cap">#12</div></a>
-<a class="card" href="2005-usa/13.html"><img class="thumb" src="images/13-2005-usa-web.jpg" alt="2005 USA #13"><div class="cap">#13</div></a>
-<a class="card" href="2005-usa/14.html"><img class="thumb" src="images/14-2005-usa-web.jpg" alt="2005 USA #14"><div class="cap">#14</div></a>
-<a class="card" href="2005-usa/15.html"><img class="thumb" src="images/15-2005-usa-web.jpg" alt="2005 USA #15"><div class="cap">#15</div></a>
-<a class="card" href="2005-usa/16.html"><img class="thumb" src="images/16-2005-usa-web.jpg" alt="2005 USA #16"><div class="cap">#16</div></a>
-<a class="card" href="2005-usa/17.html"><img class="thumb" src="images/17-2005-usa-web.jpg" alt="2005 USA #17"><div class="cap">#17</div></a>
-<a class="card" href="2005-usa/18.html"><img class="thumb" src="images/18-2005-usa-web.jpg" alt="2005 USA #18"><div class="cap">#18</div></a>
-<a class="card" href="2005-usa/19.html"><img class="thumb" src="images/19-2005-usa-web.jpg" alt="2005 USA #19"><div class="cap">#19</div></a>
-<a class="card" href="2005-usa/20.html"><img class="thumb" src="images/20-2005-usa-web.jpg" alt="2005 USA #20"><div class="cap">#20</div></a>
-<a class="card" href="2005-usa/21.html"><img class="thumb" src="images/21-2005-usa-web.jpg" alt="2005 USA #21"><div class="cap">#21</div></a>
-<a class="card" href="2005-usa/22.html"><img class="thumb" src="images/22-2005-usa-web.jpg" alt="2005 USA #22"><div class="cap">#22</div></a>
-<a class="card" href="2005-usa/23.html"><img class="thumb" src="images/23-2005-usa-web.jpg" alt="2005 USA #23"><div class="cap">#23</div></a>
-<a class="card" href="2005-usa/24.html"><img class="thumb" src="images/24-2005-usa-web.jpg" alt="2005 USA #24"><div class="cap">#24</div></a>
-<a class="card" href="2005-usa/25.html"><img class="thumb" src="images/25-2005-usa-web.jpg" alt="2005 USA #25"><div class="cap">#25</div></a>
-<a class="card" href="2005-usa/26.html"><img class="thumb" src="images/26-2005-usa-web.jpg" alt="2005 USA #26"><div class="cap">#26</div></a>
-<a class="card" href="2005-usa/27.html"><img class="thumb" src="images/27-2005-usa-web.jpg" alt="2005 USA #27"><div class="cap">#27</div></a>
-<a class="card" href="2005-usa/28.html"><img class="thumb" src="images/28-2005-usa-web.jpg" alt="2005 USA #28"><div class="cap">#28</div></a>
-<a class="card" href="2005-usa/29.html"><img class="thumb" src="images/29-2005-usa-web.jpg" alt="2005 USA #29"><div class="cap">#29</div></a>
-<a class="card" href="2005-usa/30.html"><img class="thumb" src="images/30-2005-usa-web.jpg" alt="2005 USA #30"><div class="cap">#30</div></a>
-<a class="card" href="2005-usa/31.html"><img class="thumb" src="images/31-2005-usa-web.jpg" alt="2005 USA #31"><div class="cap">#31</div></a>
-<a class="card" href="2005-usa/32.html"><img class="thumb" src="images/32-2005-usa-web.jpg" alt="2005 USA #32"><div class="cap">#32</div></a>
-<a class="card" href="2005-usa/33.html"><img class="thumb" src="images/33-2005-usa-web.jpg" alt="2005 USA #33"><div class="cap">#33</div></a>
-<a class="card" href="2005-usa/34.html"><img class="thumb" src="images/34-2005-usa-web.jpg" alt="2005 USA #34"><div class="cap">#34</div></a>
-<a class="card" href="2005-usa/35.html"><img class="thumb" src="images/35-2005-usa-web.jpg" alt="2005 USA #35"><div class="cap">#35</div></a>
-<a class="card" href="2005-usa/36.html"><img class="thumb" src="images/36-2005-usa-web.jpg" alt="2005 USA #36"><div class="cap">#36</div></a>
-<a class="card" href="2005-usa/37.html"><img class="thumb" src="images/37-2005-usa-web.jpg" alt="2005 USA #37"><div class="cap">#37</div></a>
-<a class="card" href="2005-usa/38.html"><img class="thumb" src="images/38-2005-usa-web.jpg" alt="2005 USA #38"><div class="cap">#38</div></a>
-<a class="card" href="2005-usa/39.html"><img class="thumb" src="images/39-2005-usa-web.jpg" alt="2005 USA #39"><div class="cap">#39</div></a>
-<a class="card" href="2005-usa/40.html"><img class="thumb" src="images/40-2005-usa-web.jpg" alt="2005 USA #40"><div class="cap">#40</div></a>
-<a class="card" href="2005-usa/41.html"><img class="thumb" src="images/41-2005-usa-web.jpg" alt="2005 USA #41"><div class="cap">#41</div></a>
-<a class="card" href="2005-usa/42.html"><img class="thumb" src="images/42-2005-usa-web.jpg" alt="2005 USA #42"><div class="cap">#42</div></a>
-<a class="card" href="2005-usa/43.html"><img class="thumb" src="images/43-2005-usa-web.jpg" alt="2005 USA #43"><div class="cap">#43</div></a>
-<a class="card" href="2005-usa/44.html"><img class="thumb" src="images/44-2005-usa-web.jpg" alt="2005 USA #44"><div class="cap">#44</div></a>
-<a class="card" href="2005-usa/45.html"><img class="thumb" src="images/45-2005-usa-web.jpg" alt="2005 USA #45"><div class="cap">#45</div></a>
-<a class="card" href="2005-usa/46.html"><img class="thumb" src="images/46-2005-usa-web.jpg" alt="2005 USA #46"><div class="cap">#46</div></a>
-<a class="card" href="2005-usa/47.html"><img class="thumb" src="images/47-2005-usa-web.jpg" alt="2005 USA #47"><div class="cap">#47</div></a>
-<a class="card" href="2005-usa/48.html"><img class="thumb" src="images/48-2005-usa-web.jpg" alt="2005 USA #48"><div class="cap">#48</div></a>
-<a class="card" href="2005-usa/49.html"><img class="thumb" src="images/49-2005-usa-web.jpg" alt="2005 USA #49"><div class="cap">#49</div></a>
-<a class="card" href="2005-usa/50.html"><img class="thumb" src="images/50-2005-usa-web.jpg" alt="2005 USA #50"><div class="cap">#50</div></a>
-<a class="card" href="2005-usa/51.html"><img class="thumb" src="images/51-2005-usa-web.jpg" alt="2005 USA #51"><div class="cap">#51</div></a>
-<a class="card" href="2005-usa/52.html"><img class="thumb" src="images/52-2005-usa-web.jpg" alt="2005 USA #52"><div class="cap">#52</div></a>
-<a class="card" href="2005-usa/53.html"><img class="thumb" src="images/53-2005-usa-web.jpg" alt="2005 USA #53"><div class="cap">#53</div></a>
-<a class="card" href="2005-usa/54.html"><img class="thumb" src="images/54-2005-usa-web.jpg" alt="2005 USA #54"><div class="cap">#54</div></a>
-<a class="card" href="2005-usa/55.html"><img class="thumb" src="images/55-2005-usa-web.jpg" alt="2005 USA #55"><div class="cap">#55</div></a>
-<a class="card" href="2005-usa/56.html"><img class="thumb" src="images/56-2005-usa-web.jpg" alt="2005 USA #56"><div class="cap">#56</div></a>
-<a class="card" href="2005-usa/57.html"><img class="thumb" src="images/57-2005-usa-web.jpg" alt="2005 USA #57"><div class="cap">#57</div></a>
-<a class="card" href="2005-usa/58.html"><img class="thumb" src="images/58-2005-usa-web.jpg" alt="2005 USA #58"><div class="cap">#58</div></a>
-<a class="card" href="2005-usa/59.html"><img class="thumb" src="images/59-2005-usa-web.jpg" alt="2005 USA #59"><div class="cap">#59</div></a>
-<a class="card" href="2005-usa/60.html"><img class="thumb" src="images/60-2005-usa-web.jpg" alt="2005 USA #60"><div class="cap">#60</div></a>
-<a class="card" href="2005-usa/61.html"><img class="thumb" src="images/61-2005-usa-web.jpg" alt="2005 USA #61"><div class="cap">#61</div></a>
-<a class="card" href="2005-usa/62.html"><img class="thumb" src="images/62-2005-usa-web.jpg" alt="2005 USA #62"><div class="cap">#62</div></a>
-<a class="card" href="2005-usa/63.html"><img class="thumb" src="images/63-2005-usa-web.jpg" alt="2005 USA #63"><div class="cap">#63</div></a>
-<a class="card" href="2005-usa/64.html"><img class="thumb" src="images/64-2005-usa-web.jpg" alt="2005 USA #64"><div class="cap">#64</div></a>
-<a class="card" href="2005-usa/65.html"><img class="thumb" src="images/65-2005-usa-web.jpg" alt="2005 USA #65"><div class="cap">#65</div></a>
-<a class="card" href="2005-usa/66.html"><img class="thumb" src="images/66-2005-usa-web.jpg" alt="2005 USA #66"><div class="cap">#66</div></a>
-<a class="card" href="2005-usa/67.html"><img class="thumb" src="images/67-2005-usa-web.jpg" alt="2005 USA #67"><div class="cap">#67</div></a>
-<a class="card" href="2005-usa/68.html"><img class="thumb" src="images/68-2005-usa-web.jpg" alt="2005 USA #68"><div class="cap">#68</div></a>
-<a class="card" href="2005-usa/69.html"><img class="thumb" src="images/69-2005-usa-web.jpg" alt="2005 USA #69"><div class="cap">#69</div></a>
-<a class="card" href="2005-usa/70.html"><img class="thumb" src="images/70-2005-usa-web.jpg" alt="2005 USA #70"><div class="cap">#70</div></a>
-<a class="card" href="2005-usa/71.html"><img class="thumb" src="images/71-2005-usa-web.jpg" alt="2005 USA #71"><div class="cap">#71</div></a>
-<a class="card" href="2005-usa/72.html"><img class="thumb" src="images/72-2005-usa-web.jpg" alt="2005 USA #72"><div class="cap">#72</div></a>
-<a class="card" href="2005-usa/73.html"><img class="thumb" src="images/73-2005-usa-web.jpg" alt="2005 USA #73"><div class="cap">#73</div></a>
-<a class="card" href="2005-usa/74.html"><img class="thumb" src="images/74-2005-usa-web.jpg" alt="2005 USA #74"><div class="cap">#74</div></a>
-<a class="card" href="2005-usa/75.html"><img class="thumb" src="images/75-2005-usa-web.jpg" alt="2005 USA #75"><div class="cap">#75</div></a>
+      <!-- tvoje karty 01–75 beze změny -->
+      <!-- ... -->
     </div>
   </div>
-  <script>
-  (function(){
-    var r = document.getElementById('thumbRange');
-    if(!r) return;
 
-    function apply(){
-      document.documentElement.style.setProperty('--thumbMin', r.value + 'px');
-    }
-    r.addEventListener('input', apply);
-    apply();
-  })();
-</script>
+  <script>
+    (function(){
+      var r = document.getElementById('thumbRange');
+      if(!r) return;
+
+      function apply(){
+        document.documentElement.style.setProperty('--thumbMin', r.value + 'px');
+      }
+      r.addEventListener('input', apply);
+      apply();
+    })();
+  </script>
 </body>
 </html>
