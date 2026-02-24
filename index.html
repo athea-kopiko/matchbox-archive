@@ -29,17 +29,15 @@
       padding: 22px 0 50px;
     }
 
-    .hero{
-      width: 100%;
-      max-width: 1200px;
-      max-height: 62vh;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      border-radius: 12px;
-      margin: 0 auto 10px;
-    }
-
+.hero{
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+  
     .nav-wrap{
       width: min(860px, 92vw);
       margin: 16px auto 0;
@@ -124,6 +122,11 @@
     }
 
     @media (max-height: 700px){
+        .hero{
+    max-height: 62vh;
+    width: auto;
+    max-width: 100%;
+    height: auto;
       .wrap{ padding: 10px 0 32px; }
       .nav-wrap{ margin-top: 10px; padding-top: 18px; }
       .year-title{ font-size: 30px; }
