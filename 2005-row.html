@@ -1,3 +1,115 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2005 ROW – Matchbox Superfast Archive</title>
+
+<style>
+  :root{
+    --bg:#f4efe5;
+    --line:rgba(0,0,0,.18);
+    --text:rgba(0,0,0,.85);
+    --muted:rgba(0,0,0,.55);
+    --panel:rgba(255,255,255,.18);
+  }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:Georgia,"Times New Roman",serif;
+  }
+
+  .wrap{
+    width:min(1200px,92vw);
+    margin:40px auto 70px;
+  }
+
+  h1{
+    margin:0 0 8px;
+    text-align:center;
+    font-weight:normal;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+  }
+
+  .sub{
+    text-align:center;
+    color:var(--muted);
+    margin:0 0 26px;
+    font-size:14px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+
+  .topbar{
+    display:flex;
+    justify-content:center;
+    margin:18px 0 26px;
+  }
+
+  .back{
+    text-decoration:none;
+    color:var(--text);
+    border:1px solid var(--line);
+    background:var(--panel);
+    padding:8px 14px;
+    border-radius:999px;
+    font-variant:small-caps;
+    letter-spacing:.06em;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap:18px;
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+    background:rgba(255,255,255,.10);
+  }
+
+  .card{
+    display:block;
+    padding:14px;
+  }
+
+  .thumb{
+    width:100%;
+    border-radius:10px;
+    display:block;
+    background:#fff;
+  }
+  
+  .cap{
+  margin-top:10px;
+  font-size:14px;
+  color:var(--muted);
+  letter-spacing:.03em;
+  text-align:center;
+}
+
+  /* 📱 mobil – cca 3 vedle sebe */
+  @media (max-width: 720px){
+    .grid{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>2005 ROW</h1>
+    <p class="sub">Superfast</p>
+
+    <div class="topbar">
+      <a class="back" href="/">home</a>
+    </div>
+
+    <div class="grid">
+
   <a id="m01" class="card" href="/2005-row/01.html">
     <img class="thumb" src="/images/01-2005-row-web.jpg" alt="">
     <div class="cap">#01</div>
@@ -118,7 +230,7 @@
     <img class="thumb" src="/images/30-2005-row-web.jpg" alt="">
     <div class="cap">#30</div>
   </a>
-  <a id="m31" class="card" href="/2005-row/31.html">
+  <a id="m31A" class="card" href="/2005-row/31.html">
     <img class="thumb" src="/images/31-2005-row-web.jpg" alt="">
     <div class="cap">#31</div>
   </a>
@@ -270,13 +382,13 @@
     <img class="thumb" src="/images/68-2005-row-web.jpg" alt="">
     <div class="cap">#68</div>
   </a>
-  <a id="m69" class="card" href="/2005-row/69A.html">
+  <a id="m69A" class="card" href="/2005-row/69A.html">
     <img class="thumb" src="/images/69A-2005-row-web.jpg" alt="">
-    <div class="cap">#69</div>
+    <div class="cap">#69A</div>
   </a>
-  <a id="m69" class="card" href="/2005-row/69B.html">
+   <a id="m69B" class="card" href="/2005-row/69B.html">
     <img class="thumb" src="/images/69B-2005-row-web.jpg" alt="">
-    <div class="cap">#69</div>
+    <div class="cap">#69B</div>
   </a>
   <a id="m70" class="card" href="/2005-row/70.html">
     <img class="thumb" src="/images/70-2005-row-web.jpg" alt="">
@@ -302,3 +414,8 @@
     <img class="thumb" src="/images/75-2005-row-web.jpg" alt="">
     <div class="cap">#75</div>
   </a>
+      
+    </div>
+  </div>
+</body>
+</html>
