@@ -6,12 +6,12 @@
   <title>Matchbox Superfast Archive</title>
 
   <style>
-
     :root{
       --bg: #f4efe5;
       --line: rgba(0,0,0,.18);
       --text: rgba(0,0,0,.85);
       --muted: rgba(0,0,0,.55);
+      --pill-bg: rgba(255,255,255,.18);
     }
 
     *{
@@ -42,154 +42,91 @@
     .nav-wrap{
       width: min(860px, 92vw);
       margin: 22px auto 0;
-      position: relative;
-      padding-top: 38px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
     }
 
-    /* INFO pill */
-
     .info-pill{
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 5;
-
-      background: var(--bg);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 120px;
+      padding: 7px 20px;
       border: 1px solid var(--line);
       border-radius: 999px;
-
-      padding: 7px 20px;
-
+      background: var(--bg);
       text-decoration: none;
       color: var(--muted);
-
       font-size: 15px;
       letter-spacing: .08em;
       font-variant: small-caps;
     }
 
-    /* linka mezi pill a boxem */
-
-    .info-line{
-      position: absolute;
-      top: 18px;
-      left: 50%;
-      transform: translateX(-50%);
-
-      width: 1px;
-      height: 30px;
-
-      background: var(--line);
-
-      z-index: 1;
-    }
-
-    /* hlavní box */
-
-    .year-grid{
-      position: relative;
-
+    .year-list{
+      width: 100%;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-
-      border: 1px solid var(--line);
-      border-radius: 16px;
-
-      overflow: hidden;
-
-      background: rgba(255,255,255,.16);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px 18px;
     }
 
-    /* středová svislá linka */
-
-    .year-grid::before{
-      content: "";
-
-      position: absolute;
-
-      top: 0;
-      bottom: 0;
-
-      left: 50%;
-      transform: translateX(-50%);
-
-      width: 1px;
-
-      background: var(--line);
-
-      z-index: 1;
-    }
-
-    .year-card{
-      position: relative;
-      z-index: 2;
-
+    .year-pill{
+      min-height: 92px;
       display: flex;
       align-items: center;
       justify-content: center;
-
-      min-height: 110px;
-
-      padding: 26px 18px;
-
-      text-align: center;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--pill-bg);
       text-decoration: none;
-
       color: var(--text);
-
-      transition: background .15s ease;
+      text-align: center;
+      transition: background .15s ease, transform .15s ease;
     }
 
-    .year-card:hover{
-      background: rgba(255,255,255,.10);
+    .year-pill:hover{
+      background: rgba(255,255,255,.26);
+      transform: translateY(-1px);
     }
 
     .year-title{
       font-size: 34px;
-      line-height: 1.05;
       letter-spacing: .02em;
+      line-height: 1.05;
+      white-space: nowrap;
     }
 
-    .muted{
+    .year-title .muted{
       font-size: .72em;
       color: var(--muted);
-      margin-left: 6px;
       letter-spacing: .08em;
+      margin-left: 6px;
     }
 
     .foot{
       margin: 60px 0 0;
-
       text-align: right;
-
       font-size: 13px;
       letter-spacing: .08em;
-
       color: var(--muted);
     }
 
-    /* mobile */
-
     @media (max-width: 650px){
-
-      .year-grid{
+      .year-list{
         grid-template-columns: 1fr;
       }
 
-      .year-grid::before{
-        display: none;
+      .year-pill{
+        min-height: 84px;
+        padding: 18px 16px;
       }
 
-      .year-card{
-        border-top: 1px solid var(--line);
-      }
-
-      .year-card:first-child{
-        border-top: none;
+      .year-title{
+        font-size: 30px;
       }
     }
-
   </style>
 </head>
 
@@ -197,61 +134,39 @@
 
   <div class="wrap">
 
-    <img
-      class="hero"
-      src="homepage.jpg"
-      alt="Matchbox Superfast Archive"
-    />
+    <img class="hero" src="homepage.jpg" alt="Matchbox Superfast Archive" />
 
     <div class="nav-wrap">
 
-      <a class="info-pill" href="info.html">
-        INFO
-      </a>
+      <a class="info-pill" href="info.html">INFO</a>
 
-      <div class="info-line"></div>
-
-      <div class="year-grid">
-
-        <a class="year-card" href="2005-usa.html">
-          <div class="year-title">
-            2005 <span class="muted">USA</span>
-          </div>
+      <div class="year-list">
+        <a class="year-pill" href="2005-usa.html">
+          <div class="year-title">2005 <span class="muted">USA</span></div>
         </a>
 
-        <a class="year-card" href="2005-row.html">
-          <div class="year-title">
-            2005 <span class="muted">ROW</span>
-          </div>
+        <a class="year-pill" href="2005-row.html">
+          <div class="year-title">2005 <span class="muted">ROW</span></div>
         </a>
 
-        <a class="year-card" href="2006-superfast.html">
-          <div class="year-title">
-            2006
-          </div>
+        <a class="year-pill" href="2006-superfast.html">
+          <div class="year-title">2006</div>
         </a>
 
-        <a class="year-card" href="2007-superfast.html">
-          <div class="year-title">
-            2007
-          </div>
+        <a class="year-pill" href="2007-superfast.html">
+          <div class="year-title">2007</div>
         </a>
-
       </div>
 
     </div>
 
-    <footer class="foot">
-      © Kopiko
-    </footer>
+    <footer class="foot">© Kopiko</footer>
 
   </div>
 
-  <script
-    data-goatcounter="https://kopiko.goatcounter.com/count"
-    async
-    src="//gc.zgo.at/count.js">
-  </script>
+  <script data-goatcounter="https://kopiko.goatcounter.com/count"
+          async
+          src="//gc.zgo.at/count.js"></script>
 
 </body>
 </html>
