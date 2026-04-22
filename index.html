@@ -6,9 +6,9 @@
   <title>Matchbox Superfast Archive</title>
 
   <style>
+
     :root{
       --bg: #f4efe5;
-      --panel: #efe7da;
       --line: rgba(0,0,0,.18);
       --text: rgba(0,0,0,.85);
       --muted: rgba(0,0,0,.55);
@@ -43,85 +43,133 @@
       width: min(860px, 92vw);
       margin: 22px auto 0;
       position: relative;
-      padding-top: 32px;
+      padding-top: 38px;
     }
+
+    /* INFO pill */
 
     .info-pill{
       position: absolute;
       top: 0;
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(255,255,255,.20);
+      z-index: 5;
+
+      background: var(--bg);
       border: 1px solid var(--line);
       border-radius: 999px;
-      padding: 6px 18px;
+
+      padding: 7px 20px;
+
       text-decoration: none;
       color: var(--muted);
-      letter-spacing: .06em;
+
+      font-size: 15px;
+      letter-spacing: .08em;
       font-variant: small-caps;
-      z-index: 3;
     }
+
+    /* linka mezi pill a boxem */
+
+    .info-line{
+      position: absolute;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 1px;
+      height: 30px;
+
+      background: var(--line);
+
+      z-index: 1;
+    }
+
+    /* hlavní box */
 
     .year-grid{
       position: relative;
+
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
+
       border: 1px solid var(--line);
-      border-radius: 14px;
+      border-radius: 16px;
+
       overflow: hidden;
-      background: rgba(255,255,255,.20);
+
+      background: rgba(255,255,255,.16);
     }
 
-    /* STŘEDOVÁ SVISLÁ LINKA */
+    /* středová svislá linka */
 
     .year-grid::before{
       content: "";
+
       position: absolute;
+
       top: 0;
       bottom: 0;
+
       left: 50%;
-      width: 1px;
-      background: var(--line);
       transform: translateX(-50%);
+
+      width: 1px;
+
+      background: var(--line);
+
       z-index: 1;
     }
 
     .year-card{
-      display: grid;
-      place-items: center;
-      padding: 22px 10px 20px;
-      min-height: 120px;
-      text-decoration: none;
-      color: var(--text);
-      text-align: center;
       position: relative;
       z-index: 2;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 110px;
+
+      padding: 26px 18px;
+
+      text-align: center;
+      text-decoration: none;
+
+      color: var(--text);
+
+      transition: background .15s ease;
+    }
+
+    .year-card:hover{
+      background: rgba(255,255,255,.10);
     }
 
     .year-title{
-      font-size: 52px;
-      letter-spacing: .02em;
+      font-size: 34px;
       line-height: 1.05;
+      letter-spacing: .02em;
     }
 
-    .year-title .muted{
+    .muted{
       font-size: .72em;
       color: var(--muted);
-      letter-spacing: .08em;
       margin-left: 6px;
-    }
-
-    .year-sub{
-      display: none;
+      letter-spacing: .08em;
     }
 
     .foot{
       margin: 60px 0 0;
+
       text-align: right;
+
       font-size: 13px;
       letter-spacing: .08em;
+
       color: var(--muted);
     }
+
+    /* mobile */
 
     @media (max-width: 650px){
 
@@ -132,6 +180,14 @@
       .year-grid::before{
         display: none;
       }
+
+      .year-card{
+        border-top: 1px solid var(--line);
+      }
+
+      .year-card:first-child{
+        border-top: none;
+      }
     }
 
   </style>
@@ -141,11 +197,19 @@
 
   <div class="wrap">
 
-    <img class="hero" src="homepage.jpg" alt="Matchbox Superfast Archive" />
+    <img
+      class="hero"
+      src="homepage.jpg"
+      alt="Matchbox Superfast Archive"
+    />
 
     <div class="nav-wrap">
 
-      <a class="info-pill" href="info.html">INFO</a>
+      <a class="info-pill" href="info.html">
+        INFO
+      </a>
+
+      <div class="info-line"></div>
 
       <div class="year-grid">
 
@@ -167,16 +231,27 @@
           </div>
         </a>
 
+        <a class="year-card" href="2007-superfast.html">
+          <div class="year-title">
+            2007
+          </div>
+        </a>
+
       </div>
 
     </div>
 
-    <footer class="foot">© Kopiko</footer>
+    <footer class="foot">
+      © Kopiko
+    </footer>
 
   </div>
 
-  <script data-goatcounter="https://kopiko.goatcounter.com/count"
-          async src="//gc.zgo.at/count.js"></script>
+  <script
+    data-goatcounter="https://kopiko.goatcounter.com/count"
+    async
+    src="//gc.zgo.at/count.js">
+  </script>
 
 </body>
 </html>
