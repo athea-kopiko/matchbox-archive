@@ -25,4 +25,14 @@ if (gallery && navLinks.length >= 2) {
       window.location.href = prevLink;
     }
   });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowRight") {
+      window.location.href = nextLink;
+    }
+
+    if (e.key === "ArrowLeft") {
+      window.location.href = prevLink;
+    }
+  });
 }
