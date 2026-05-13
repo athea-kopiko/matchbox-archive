@@ -2,28 +2,27 @@ let touchStartX = 0;
 let touchEndX = 0;
 
 const gallery = document.querySelector(".gallery");
+const navLinks = document.querySelectorAll(".nav a.pill");
 
-if (gallery) {
+if (gallery && navLinks.length >= 2) {
+  const prevLink = navLinks[0].href;
+  const nextLink = navLinks[1].href;
 
-  gallery.addEventListener("touchstart", e => {
+  gallery.addEventListener("touchstart", function (e) {
     touchStartX = e.changedTouches[0].screenX;
   });
 
-  gallery.addEventListener("touchend", e => {
+  gallery.addEventListener("touchend", function (e) {
     touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-  });
-
-  function handleSwipe() {
 
     const swipeDistance = touchStartX - touchEndX;
 
     if (swipeDistance > 50) {
-      nextImage();
+      window.location.href = nextLink;
     }
 
     if (swipeDistance < -50) {
-      prevImage();
+      window.location.href = prevLink;
     }
-  }
+  });
 }
