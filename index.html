@@ -1,773 +1,177 @@
-  <!doctype html>
+<!doctype html>
 <html lang="cs">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>2007 Best of British – Matchbox Superfast Archive</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Matchbox Superfast Archive</title>
 
-<style>
-  :root{
-    --bg:#f4efe5;
-    --line:rgba(0,0,0,.18);
-    --text:rgba(0,0,0,.85);
-    --muted:rgba(0,0,0,.55);
-    --panel:rgba(255,255,255,.18);
-  }
-
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--text);
-    font-family:Georgia,"Times New Roman",serif;
-  }
-
-  .wrap{
-    width:min(1200px,92vw);
-    margin:40px auto 70px;
-  }
-
-  h1{
-    margin:0 0 8px;
-    text-align:center;
-    font-weight:normal;
-    letter-spacing:.06em;
-    text-transform:uppercase;
-  }
-
-  .sub{
-    text-align:center;
-    color:var(--muted);
-    margin:0 0 26px;
-    font-size:14px;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-  }
-
-  .topbar{
-    display:flex;
-    justify-content:center;
-    margin:18px 0 26px;
-  }
-
-  .back{
-    text-decoration:none;
-    color:var(--text);
-    border:1px solid var(--line);
-    background:var(--panel);
-    padding:8px 14px;
-    border-radius:999px;
-    font-variant:small-caps;
-    letter-spacing:.06em;
-  }
-
-  .grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap:18px;
-    border:1px solid var(--line);
-    border-radius:14px;
-    overflow:hidden;
-    background:rgba(255,255,255,.10);
-  }
-
-  .card{
-    display:block;
-    padding:14px;
-  }
-
-  .thumb{
-    width:100%;
-    border-radius:10px;
-    display:block;
-    background:#fff;
-  }
-  
-  .cap{
-  margin-top:10px;
-  font-size:14px;
-  color:var(--muted);
-  letter-spacing:.03em;
-  text-align:center;
-}
-
-  /* 📱 mobil – cca 3 vedle sebe */
-  @media (max-width: 720px){
-    .grid{
-      grid-template-columns: repeat(3, 1fr);
+  <style>
+    :root{
+      --bg: #f4efe5;
+      --line: rgba(0,0,0,.18);
+      --text: rgba(0,0,0,.85);
+      --muted: rgba(0,0,0,.55);
+      --pill-bg: rgba(255,255,255,.18);
     }
-  }
-</style>
+
+    *{
+      box-sizing: border-box;
+    }
+
+    body{
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .wrap{
+      width: min(1200px, 92vw);
+      margin: 0 auto;
+      padding: 22px 0 50px;
+    }
+
+    .hero{
+      width: 100%;
+      max-width: 1200px;
+      display: block;
+      margin: 0 auto;
+      border-radius: 12px;
+    }
+
+    .nav-wrap{
+      width: min(860px, 92vw);
+      margin: 22px auto 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .info-pill{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 120px;
+      padding: 7px 20px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--bg);
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 15px;
+      letter-spacing: .08em;
+      font-variant: small-caps;
+    }
+
+    .year-list{
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px 18px;
+    }
+
+    .year-pill{
+      min-height: 92px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 18px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--pill-bg);
+      text-decoration: none;
+      color: var(--text);
+      text-align: center;
+      transition: background .15s ease, transform .15s ease;
+    }
+
+    .year-pill:hover{
+      background: rgba(255,255,255,.26);
+      transform: translateY(-1px);
+    }
+
+    .year-title{
+      font-size: 34px;
+      letter-spacing: .02em;
+      line-height: 1.05;
+      white-space: nowrap;
+    }
+
+    .year-title .muted{
+      font-size: .72em;
+      color: var(--muted);
+      letter-spacing: .08em;
+      margin-left: 6px;
+    }
+
+    .foot{
+      margin: 60px 0 0;
+      text-align: right;
+      font-size: 13px;
+      letter-spacing: .08em;
+      color: var(--muted);
+    }
+
+    @media (max-width: 650px){
+      .year-list{
+        grid-template-columns: 1fr;
+      }
+
+      .year-pill{
+        min-height: 84px;
+        padding: 18px 16px;
+      }
+
+      .year-title{
+        font-size: 30px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+
   <div class="wrap">
-    <h1>2007</h1>
-    <p class="sub">Best of British</p>
 
-    <div class="topbar">
-      <a class="back" href="/">home</a>
+    <img class="hero" src="homepage.jpg" alt="Matchbox Superfast Archive" />
+
+    <div class="nav-wrap">
+
+      <a class="info-pill" href="info.html">INFO</a>
+
+      <div class="year-list">
+        <a class="year-pill" href="2005-usa.html">
+          <div class="year-title">2005 <span class="muted">USA</span></div>
+        </a>
+
+        <a class="year-pill" href="2005-row.html">
+          <div class="year-title">2005 <span class="muted">ROW</span></div>
+        </a>
+
+        <a class="year-pill" href="2006-superfast.html">
+          <div class="year-title">2006</div>
+        </a>
+
+        <a class="year-pill" href="2007-America.html">
+           <div class="year-title">2007 <span class="muted">AMERICA</span></div>
+        </a>
+
+        <a class="year-pill" href="2007-2009-best_of.html">
+          <div class="year-title">2007 - 2009<br>
+            <span class="muted">Best of ...</span></div>
+        </a>
+      </div>
+
     </div>
 
-    <div class="grid">
+    <footer class="foot">© Kopiko</footer>
 
- <a id="m01" class="card" href="/2007-bob/01.html">
-    <img class="thumb" src="/images/01-2007-bob-web.jpg" alt="">
-    <div class="cap">#01</div>
-  </a>
-  <a id="m02" class="card" href="/2007-bob/02.html">
-    <img class="thumb" src="/images/02-2007-bob-web.jpg" alt="">
-    <div class="cap">#02</div>
-  </a>
-  <a id="m03" class="card" href="/2007-bob/03.html">
-    <img class="thumb" src="/images/03-2007-bob-web.jpg" alt="">
-    <div class="cap">#03</div>
-  </a>
-  <a id="m04" class="card" href="/2007-bob/04.html">
-    <img class="thumb" src="/images/04-2007-bob-web.jpg" alt="">
-    <div class="cap">#04</div>
-  </a>
-  <a id="m05" class="card" href="/2007-bob/05.html">
-    <img class="thumb" src="/images/05-2007-bob-web.jpg" alt="">
-    <div class="cap">#05</div>
-  </a>
-  <a id="m06" class="card" href="/2007-bob/06.html">
-    <img class="thumb" src="/images/06-2007-bob-web.jpg" alt="">
-    <div class="cap">#06</div>
-  </a>
-  <a id="m07" class="card" href="/2007-bob/07.html">
-    <img class="thumb" src="/images/07-2007-bob-web.jpg" alt="">
-    <div class="cap">#07</div>
-  </a>
-  <a id="m08" class="card" href="/2007-bob/08.html">
-    <img class="thumb" src="/images/08-2007-bob-web.jpg" alt="">
-    <div class="cap">#08</div>
-  </a>
-  <a id="m09" class="card" href="/2007-bob/09.html">
-    <img class="thumb" src="/images/09-2007-bob-web.jpg" alt="">
-    <div class="cap">#09</div>
-  </a>
-  <a id="m10" class="card" href="/2007-bob/10.html">
-    <img class="thumb" src="/images/10-2007-bob-web.jpg" alt="">
-    <div class="cap">#10</div>
-  </a>
-  <a id="m11" class="card" href="/2007-bob/11.html">
-    <img class="thumb" src="/images/11-2007-bob-web.jpg" alt="">
-    <div class="cap">#11</div>
-  </a>
-  <a id="m12" class="card" href="/2007-bob/12.html">
-    <img class="thumb" src="/images/12-2007-bob-web.jpg" alt="">
-    <div class="cap">#12</div>
-  </a>
-      
-    </div>
   </div>
 
-  <!doctype html>
-<html lang="cs">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>2008 Best of British – Matchbox Superfast Archive</title>
+  <script data-goatcounter="https://kopiko.goatcounter.com/count"
+          async
+          src="//gc.zgo.at/count.js"></script>
 
-<style>
-  :root{
-    --bg:#f4efe5;
-    --line:rgba(0,0,0,.18);
-    --text:rgba(0,0,0,.85);
-    --muted:rgba(0,0,0,.55);
-    --panel:rgba(255,255,255,.18);
-  }
-
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--text);
-    font-family:Georgia,"Times New Roman",serif;
-  }
-
-  .wrap{
-    width:min(1200px,92vw);
-    margin:40px auto 70px;
-  }
-
-  h1{
-    margin:0 0 8px;
-    text-align:center;
-    font-weight:normal;
-    letter-spacing:.06em;
-    text-transform:uppercase;
-  }
-
-  .sub{
-    text-align:center;
-    color:var(--muted);
-    margin:0 0 26px;
-    font-size:14px;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-  }
-
-  .topbar{
-    display:flex;
-    justify-content:center;
-    margin:18px 0 26px;
-  }
-
-  .back{
-    text-decoration:none;
-    color:var(--text);
-    border:1px solid var(--line);
-    background:var(--panel);
-    padding:8px 14px;
-    border-radius:999px;
-    font-variant:small-caps;
-    letter-spacing:.06em;
-  }
-
-  .grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap:18px;
-    border:1px solid var(--line);
-    border-radius:14px;
-    overflow:hidden;
-    background:rgba(255,255,255,.10);
-  }
-
-  .card{
-    display:block;
-    padding:14px;
-  }
-
-  .thumb{
-    width:100%;
-    border-radius:10px;
-    display:block;
-    background:#fff;
-  }
-  
-  .cap{
-  margin-top:10px;
-  font-size:14px;
-  color:var(--muted);
-  letter-spacing:.03em;
-  text-align:center;
-}
-
-  /* 📱 mobil – cca 3 vedle sebe */
-  @media (max-width: 720px){
-    .grid{
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-</style>
-</head>
-
-<body>
-  <div class="wrap">
-    <h1>2008</h1>
-    <p class="sub">Best of British</p>
-
-    <div class="topbar">
-      <a class="back" href="/">home</a>
-    </div>
-
-    <div class="grid">
-
- <a id="b01" class="card" href="/2008-bob/01.html">
-    <img class="thumb" src="/images/01-2008-bob-web.jpg" alt="">
-    <div class="cap">#01</div>
-  </a>
-  <a id="b02" class="card" href="/2008-bob/02.html">
-    <img class="thumb" src="/images/02-2008-bob-web.jpg" alt="">
-    <div class="cap">#02</div>
-  </a>
-  <a id="b03" class="card" href="/2008-bob/03.html">
-    <img class="thumb" src="/images/03-2008-bob-web.jpg" alt="">
-    <div class="cap">#03</div>
-  </a>
-  <a id="b04" class="card" href="/2008-bob/04.html">
-    <img class="thumb" src="/images/04-2008-bob-web.jpg" alt="">
-    <div class="cap">#04</div>
-  </a>
-  <a id="b05" class="card" href="/2008-bob/05.html">
-    <img class="thumb" src="/images/05-2008-bob-web.jpg" alt="">
-    <div class="cap">#05</div>
-  </a>
-  <a id="b06" class="card" href="/2008-bob/06.html">
-    <img class="thumb" src="/images/06-2008-bob-web.jpg" alt="">
-    <div class="cap">#06</div>
-  </a>
-  <a id="b07" class="card" href="/2008-bob/07.html">
-    <img class="thumb" src="/images/07-2008-bob-web.jpg" alt="">
-    <div class="cap">#07</div>
-  </a>
-  <a id="m08" class="card" href="/2008-bob/08.html">
-    <img class="thumb" src="/images/08-2008-bob-web.jpg" alt="">
-    <div class="cap">#08</div>
-  </a>
-  <a id="b09" class="card" href="/2008-bob/09.html">
-    <img class="thumb" src="/images/09-2008-bob-web.jpg" alt="">
-    <div class="cap">#09</div>
-  </a>
-  <a id="b10" class="card" href="/2008-bob/10.html">
-    <img class="thumb" src="/images/10-2008-bob-web.jpg" alt="">
-    <div class="cap">#10</div>
-  </a>
-  <a id="b11" class="card" href="/2008-bob/11.html">
-    <img class="thumb" src="/images/11-2008-bob-web.jpg" alt="">
-    <div class="cap">#11</div>
-  </a>
-  <a id="b12" class="card" href="/2008-bob/12.html">
-    <img class="thumb" src="/images/12-2008-bob-web.jpg" alt="">
-    <div class="cap">#12</div>
-  </a>
-      
-    </div>
-  </div>
-
-  <!doctype html>
-<html lang="cs">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>2008 Best of International – Matchbox Superfast Archive</title>
-
-<style>
-  :root{
-    --bg:#f4efe5;
-    --line:rgba(0,0,0,.18);
-    --text:rgba(0,0,0,.85);
-    --muted:rgba(0,0,0,.55);
-    --panel:rgba(255,255,255,.18);
-  }
-
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--text);
-    font-family:Georgia,"Times New Roman",serif;
-  }
-
-  .wrap{
-    width:min(1200px,92vw);
-    margin:40px auto 70px;
-  }
-
-  h1{
-    margin:0 0 8px;
-    text-align:center;
-    font-weight:normal;
-    letter-spacing:.06em;
-    text-transform:uppercase;
-  }
-
-  .sub{
-    text-align:center;
-    color:var(--muted);
-    margin:0 0 26px;
-    font-size:14px;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-  }
-
-  .topbar{
-    display:flex;
-    justify-content:center;
-    margin:18px 0 26px;
-  }
-
-  .back{
-    text-decoration:none;
-    color:var(--text);
-    border:1px solid var(--line);
-    background:var(--panel);
-    padding:8px 14px;
-    border-radius:999px;
-    font-variant:small-caps;
-    letter-spacing:.06em;
-  }
-
-  .grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap:18px;
-    border:1px solid var(--line);
-    border-radius:14px;
-    overflow:hidden;
-    background:rgba(255,255,255,.10);
-  }
-
-  .card{
-    display:block;
-    padding:14px;
-  }
-
-  .thumb{
-    width:100%;
-    border-radius:10px;
-    display:block;
-    background:#fff;
-  }
-  
-  .cap{
-  margin-top:10px;
-  font-size:14px;
-  color:var(--muted);
-  letter-spacing:.03em;
-  text-align:center;
-}
-
-  /* 📱 mobil – cca 3 vedle sebe */
-  @media (max-width: 720px){
-    .grid{
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-</style>
-</head>
-
-<body>
-  <div class="wrap">
-    <h1>2008</h1>
-    <p class="sub">Best of International</p>
-
-    <div class="topbar">
-      <a class="back" href="/">home</a>
-    </div>
-
-    <div class="grid">
-
- <a id="i01" class="card" href="/2008-boi/01.html">
-    <img class="thumb" src="/images/01-2008-boi-web.jpg" alt="">
-    <div class="cap">#01</div>
-  </a>
-  <a id="i02" class="card" href="/2008-boi/02.html">
-    <img class="thumb" src="/images/02-2008-boi-web.jpg" alt="">
-    <div class="cap">#02</div>
-  </a>
-  <a id="i03" class="card" href="/2008-boi/03.html">
-    <img class="thumb" src="/images/03-2008-boi-web.jpg" alt="">
-    <div class="cap">#03</div>
-  </a>
-  <a id="i04" class="card" href="/2008-boi/04.html">
-    <img class="thumb" src="/images/04-2008-boi-web.jpg" alt="">
-    <div class="cap">#04</div>
-  </a>
-  <a id="i05" class="card" href="/2008-boi/05.html">
-    <img class="thumb" src="/images/05-2008-boi-web.jpg" alt="">
-    <div class="cap">#05</div>
-  </a>
-  <a id="i06" class="card" href="/2008-boi/06.html">
-    <img class="thumb" src="/images/06-2008-boi-web.jpg" alt="">
-    <div class="cap">#06</div>
-  </a>
-      
-    </div>
-  </div>
-
-  <!doctype html>
-<html lang="cs">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>2008 Best of Muscle – Matchbox Superfast Archive</title>
-
-<style>
-  :root{
-    --bg:#f4efe5;
-    --line:rgba(0,0,0,.18);
-    --text:rgba(0,0,0,.85);
-    --muted:rgba(0,0,0,.55);
-    --panel:rgba(255,255,255,.18);
-  }
-
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--text);
-    font-family:Georgia,"Times New Roman",serif;
-  }
-
-  .wrap{
-    width:min(1200px,92vw);
-    margin:40px auto 70px;
-  }
-
-  h1{
-    margin:0 0 8px;
-    text-align:center;
-    font-weight:normal;
-    letter-spacing:.06em;
-    text-transform:uppercase;
-  }
-
-  .sub{
-    text-align:center;
-    color:var(--muted);
-    margin:0 0 26px;
-    font-size:14px;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-  }
-
-  .topbar{
-    display:flex;
-    justify-content:center;
-    margin:18px 0 26px;
-  }
-
-  .back{
-    text-decoration:none;
-    color:var(--text);
-    border:1px solid var(--line);
-    background:var(--panel);
-    padding:8px 14px;
-    border-radius:999px;
-    font-variant:small-caps;
-    letter-spacing:.06em;
-  }
-
-  .grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap:18px;
-    border:1px solid var(--line);
-    border-radius:14px;
-    overflow:hidden;
-    background:rgba(255,255,255,.10);
-  }
-
-  .card{
-    display:block;
-    padding:14px;
-  }
-
-  .thumb{
-    width:100%;
-    border-radius:10px;
-    display:block;
-    background:#fff;
-  }
-  
-  .cap{
-  margin-top:10px;
-  font-size:14px;
-  color:var(--muted);
-  letter-spacing:.03em;
-  text-align:center;
-}
-
-  /* 📱 mobil – cca 3 vedle sebe */
-  @media (max-width: 720px){
-    .grid{
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-</style>
-</head>
-
-<body>
-  <div class="wrap">
-    <h1>2008</h1>
-    <p class="sub">Best of Muscle</p>
-
-    <div class="topbar">
-      <a class="back" href="/">home</a>
-    </div>
-
-    <div class="grid">
-
- <a id="w01" class="card" href="/2008-bom/01.html">
-    <img class="thumb" src="/images/01-2008-bom-web.jpg" alt="">
-    <div class="cap">#01</div>
-  </a>
-  <a id="w02" class="card" href="/2008-bom/02.html">
-    <img class="thumb" src="/images/02-2008-bom-web.jpg" alt="">
-    <div class="cap">#02</div>
-  </a>
-  <a id="w03" class="card" href="/2008-bom/03.html">
-    <img class="thumb" src="/images/03-2008-bom-web.jpg" alt="">
-    <div class="cap">#03</div>
-  </a>
-  <a id="w04" class="card" href="/2008-bom/04.html">
-    <img class="thumb" src="/images/04-2008-bom-web.jpg" alt="">
-    <div class="cap">#04</div>
-  </a>
-  <a id="w05" class="card" href="/2008-bom/05.html">
-    <img class="thumb" src="/images/05-2008-bom-web.jpg" alt="">
-    <div class="cap">#05</div>
-  </a>
-  <a id="w06" class="card" href="/2008-bom/06.html">
-    <img class="thumb" src="/images/06-2008-bom-web.jpg" alt="">
-    <div class="cap">#06</div>
-  </a>
-      
-    </div>
-  </div>
-
-  <!doctype html>
-<html lang="cs">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>2009 Best of British – Matchbox Superfast Archive</title>
-
-<style>
-  :root{
-    --bg:#f4efe5;
-    --line:rgba(0,0,0,.18);
-    --text:rgba(0,0,0,.85);
-    --muted:rgba(0,0,0,.55);
-    --panel:rgba(255,255,255,.18);
-  }
-
-  body{
-    margin:0;
-    background:var(--bg);
-    color:var(--text);
-    font-family:Georgia,"Times New Roman",serif;
-  }
-
-  .wrap{
-    width:min(1200px,92vw);
-    margin:40px auto 70px;
-  }
-
-  h1{
-    margin:0 0 8px;
-    text-align:center;
-    font-weight:normal;
-    letter-spacing:.06em;
-    text-transform:uppercase;
-  }
-
-  .sub{
-    text-align:center;
-    color:var(--muted);
-    margin:0 0 26px;
-    font-size:14px;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-  }
-
-  .topbar{
-    display:flex;
-    justify-content:center;
-    margin:18px 0 26px;
-  }
-
-  .back{
-    text-decoration:none;
-    color:var(--text);
-    border:1px solid var(--line);
-    background:var(--panel);
-    padding:8px 14px;
-    border-radius:999px;
-    font-variant:small-caps;
-    letter-spacing:.06em;
-  }
-
-  .grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap:18px;
-    border:1px solid var(--line);
-    border-radius:14px;
-    overflow:hidden;
-    background:rgba(255,255,255,.10);
-  }
-
-  .card{
-    display:block;
-    padding:14px;
-  }
-
-  .thumb{
-    width:100%;
-    border-radius:10px;
-    display:block;
-    background:#fff;
-  }
-  
-  .cap{
-  margin-top:10px;
-  font-size:14px;
-  color:var(--muted);
-  letter-spacing:.03em;
-  text-align:center;
-}
-
-  /* 📱 mobil – cca 3 vedle sebe */
-  @media (max-width: 720px){
-    .grid{
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-</style>
-</head>
-
-<body>
-  <div class="wrap">
-    <h1>2009</h1>
-    <p class="sub">Best of British</p>
-
-    <div class="topbar">
-      <a class="back" href="/">home</a>
-    </div>
-
-    <div class="grid">
-
- <a id="o01" class="card" href="/2009-bob/01.html">
-    <img class="thumb" src="/images/01-2009-bob-web.jpg" alt="">
-    <div class="cap">#01</div>
-  </a>
-  <a id="o02" class="card" href="/2009-bob/02.html">
-    <img class="thumb" src="/images/02-2009-bob-web.jpg" alt="">
-    <div class="cap">#02</div>
-  </a>
-  <a id="o03" class="card" href="/2009-bob/03.html">
-    <img class="thumb" src="/images/03-2009-bob-web.jpg" alt="">
-    <div class="cap">#03</div>
-  </a>
-  <a id="o04" class="card" href="/2009-bob/04.html">
-    <img class="thumb" src="/images/04-2009-bob-web.jpg" alt="">
-    <div class="cap">#04</div>
-  </a>
-  <a id="o05" class="card" href="/2009-bob/05.html">
-    <img class="thumb" src="/images/05-2009-bob-web.jpg" alt="">
-    <div class="cap">#05</div>
-  </a>
-  <a id="o06" class="card" href="/2009-bob/06.html">
-    <img class="thumb" src="/images/06-2009-bob-web.jpg" alt="">
-    <div class="cap">#06</div>
-  </a>
-  <a id="o07" class="card" href="/2009-bob/07.html">
-    <img class="thumb" src="/images/07-2009-bob-web.jpg" alt="">
-    <div class="cap">#07</div>
-  </a>
-  <a id="o08" class="card" href="/2009-bob/08.html">
-    <img class="thumb" src="/images/08-2009-bob-web.jpg" alt="">
-    <div class="cap">#08</div>
-  </a>
-  <a id="o09" class="card" href="/2009-bob/09.html">
-    <img class="thumb" src="/images/09-2009-bob-web.jpg" alt="">
-    <div class="cap">#09</div>
-  </a>
-  <a id="o10" class="card" href="/2009-bob/10.html">
-    <img class="thumb" src="/images/10-2009-bob-web.jpg" alt="">
-    <div class="cap">#10</div>
-  </a>
-  <a id="o11" class="card" href="/2009-bob/11.html">
-    <img class="thumb" src="/images/11-2009-bob-web.jpg" alt="">
-    <div class="cap">#11</div>
-  </a>
-  <a id="o12" class="card" href="/2009-bob/12.html">
-    <img class="thumb" src="/images/12-2009-bob-web.jpg" alt="">
-    <div class="cap">#12</div>
-  </a>
-      
-    </div>
-  </div>
 </body>
 </html>
