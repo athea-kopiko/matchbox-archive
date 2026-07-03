@@ -40,12 +40,12 @@
     }
 
     .nav-wrap{
-      width: min(860px, 92vw);
+      width: min(900px, 92vw);
       margin: 22px auto 0;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 18px;
+      gap: 14px;
     }
 
     .info-pill{
@@ -67,16 +67,16 @@
     .year-list{
       width: 100%;
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px 18px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px 14px;
     }
 
     .year-pill{
-      min-height: 92px;
+      min-height: 56px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 20px 18px;
+      padding: 12px 14px;
       border: 1px solid var(--line);
       border-radius: 999px;
       background: var(--pill-bg);
@@ -92,12 +92,118 @@
     }
 
     .year-title{
-      font-size: 34px;
+      font-size: 24px;
       letter-spacing: .02em;
       line-height: 1.05;
       white-space: nowrap;
     }
 
+    .year-title .muted{
+      font-size: .72em;
+      color: var(--muted);
+      letter-spacing: .08em;
+      margin-left: 6px;
+    }
+
+    .foot{
+      margin: 60px 0 0;
+      text-align: right;
+      font-size: 13px;
+      letter-spacing: .08em;
+      color: var(--muted);
+    }
+
+    @media (max-width: 900px){
+      .year-list{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px){
+      .year-list{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px 10px;
+      }
+
+      .year-pill{
+        min-height: 52px;
+        padding: 10px 8px;
+      }
+
+      .year-title{
+        font-size: 21px;
+      }
+
+      .year-title .muted{
+        font-size: .68em;
+        margin-left: 3px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <img class="hero" src="homepage.jpg" alt="Matchbox Superfast Archive" />
+
+    <div class="nav-wrap">
+
+      <a class="info-pill" href="info.html">INFO</a>
+
+      <div class="year-list">
+        <a class="year-pill" href="2005-usa.html">
+          <div class="year-title">2005 <span class="muted">USA</span></div>
+        </a>
+
+        <a class="year-pill" href="2005-row.html">
+          <div class="year-title">2005 <span class="muted">ROW</span></div>
+        </a>
+
+        <a class="year-pill" href="2006-superfast.html">
+          <div class="year-title">2006</div>
+        </a>
+
+        <a class="year-pill" href="2007-America.html">
+           <div class="year-title">2007 <span class="muted">AMERICA</span></div>
+        </a>
+
+        <a class="year-pill" href="2007-2009-best_of.html">
+          <div class="year-title">2007 - 2009<br>
+            <span class="muted">Best of ...</span></div>
+        </a>
+      
+        <a class="year-pill" href="2008-superfast.html">
+           <div class="year-title">2008</div>
+        </a>
+      
+        <a class="year-pill" href="2009-superfast.html">
+           <div class="year-title">2009</div>
+        </a>
+        
+        <a class="year-pill" href="2010-2011-lesney_editions.html">
+           <div class="year-title">2010 - 2011<br>
+            <span class="muted">Lesney Editions</span></div>
+        </a>
+              
+        <a class="year-pill" href="2013-superfast.html">
+           <div class="year-title">2013</div>
+        </a>       
+      </div>
+
+    </div>
+
+    <footer class="foot">© Kopiko</footer>
+
+  </div>
+
+  <script data-goatcounter="https://kopiko.goatcounter.com/count"
+          async
+          src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
     .year-title .muted{
       font-size: .72em;
       color: var(--muted);
