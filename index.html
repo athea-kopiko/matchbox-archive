@@ -40,12 +40,12 @@
     }
 
     .nav-wrap{
-      width: min(900px, 92vw);
+      width: min(860px, 92vw);
       margin: 22px auto 0;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 14px;
+      gap: 18px;
     }
 
     .info-pill{
@@ -67,16 +67,16 @@
     .year-list{
       width: 100%;
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px 14px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px 18px;
     }
 
     .year-pill{
-      min-height: 56px;
+      min-height: 46px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 12px 14px;
+      padding: 10px 9px;
       border: 1px solid var(--line);
       border-radius: 999px;
       background: var(--pill-bg);
@@ -92,7 +92,7 @@
     }
 
     .year-title{
-      font-size: 24px;
+      font-size: 17px;
       letter-spacing: .02em;
       line-height: 1.05;
       white-space: nowrap;
@@ -113,30 +113,18 @@
       color: var(--muted);
     }
 
-    @media (max-width: 900px){
-      .year-list{
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-    }
-
     @media (max-width: 650px){
       .year-list{
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px 10px;
+        grid-template-columns: 1fr;
       }
 
       .year-pill{
-        min-height: 52px;
-        padding: 10px 8px;
+        min-height: 42px;
+        padding: 9px 8px;
       }
 
       .year-title{
-        font-size: 21px;
-      }
-
-      .year-title .muted{
-        font-size: .68em;
-        margin-left: 3px;
+        font-size: 15px;
       }
     }
   </style>
